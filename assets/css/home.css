@@ -47,6 +47,9 @@ p,
     min-width: 100px;
     margin-bottom: 60px;
 }
+.container .h-contato:last-child {
+    margin-bottom: 0;
+}
 
 /* Títulos das sessões */
 .container .h-sobre .h-title-sobre,
@@ -164,7 +167,7 @@ p,
 /* Footer */
 footer {
     width: 100%;
-    height: 50px;
+    height: 80px;
     background-color: #E04D09;
     box-sizing: border-box;
 }
