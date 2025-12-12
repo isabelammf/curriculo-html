@@ -1,8 +1,13 @@
-@import "./assets/css/home.css";
-@import "./assets/css/responsive.css";
-@import "./assets/css/util.css";
+/* --- 1. Variáveis e Reset Geral --- */
+:root {
+    --primary-color: #E04D09;   
+    --text-color: #333333;      
+    --bg-color: #ffffff;
+    --bg-alt: #f4f7f9;        
+    --font-body: 'Mooli', sans-serif;
+    --font-heading: 'Croissant One', cursive;
+}
 
-/* resetar a pagina */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +16,298 @@
 
 html, body {
     width: 100%;
-    height: 100%;
-    font-family: 'Mooli', sans-serif;
+    font-family: var(--font-body);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+}
+
+/* Container Principal */
+.container {
+    width: 90%;
+    max-width: 1100px; 
+    margin: 0 auto;    /* Centraliza na tela */
+    padding: 40px 0;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* --- 2. Cabeçalho (Header) --- */
+.main-header {
+    text-align: left;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-header h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem; /* 48px */
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.main-header .subtitle {
+    font-family: var(--font-heading);
+    font-size: 1.8rem; /* 28px */
+    color: var(--primary-color);
+}
+
+/* --- 3. Estilos Gerais de Seção --- */
+section {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: #000;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    display: inline-block; /* A linha fica do tamanho do texto */
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+/* --- 4. Seção Sobre Mim --- */
+.section-about .content p {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* --- 5. Seção Experiências (Visual idêntico à imagem) --- */
+.job-item {
+    display: flex;
+    align-items: stretch; /* Garante que a linha vá até o final do item */
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* Coluna da Esquerda (Empresa e Data) */
+.job-meta {
+    flex: 0 0 180px; /* Largura fixa igual da imagem para quebrar a linha do texto */
+    border-right: 3px solid var(--primary-color); /* A LINHA LARANJA VERTICAL */
+    padding-right: 20px;
+    text-align: left; /* Alinhamento do texto à esquerda */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.job-meta h3 {
+    font-family: var(--font-body); /* Fonte Mooli */
+    font-weight: 900; /* Bem negrito */
+    font-size: 1rem;
+    color: #000;
+    text-transform: uppercase; /* Letras maiúsculas */
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.job-meta .date {
+    display: block;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* Coluna da Direita (Detalhes) */
+.job-details {
+    flex: 1;
+    padding-left: 30px; /* Espaço entre a linha laranja e o texto */
+}
+
+.job-details h4 {
+    font-family: var(--font-heading); /* Fonte Croissant One */
+    color: var(--primary-color);     
+    font-size: 1.6rem;
+    margin-top: -5px; /* Ajuste fino para alinhar o topo com o nome da empresa */
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.job-details ul {
+    list-style-position: outside;
+    margin-left: 20px;
+}
+
+.job-details li {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.05rem;
+}
+
+/* --- 6. Seção Educação (Grid) --- */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo automático */
+    gap: 20px;
+}
+
+.edu-card {
+    background: var(--bg-alt);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.edu-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.edu-card .institution {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.edu-card .status {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* --- 7. Seção Habilidades (Cards Coloridos) --- */
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    overflow: hidden;
+    flex: 1 1 300px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.header-icon { font-size: 1.5rem; }
+
+.card-body {
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+    cursor: default;
+}
+.skill-tag:hover { transform: translateY(-3px); }
+.skill-tag i { margin-right: 8px; }
+
+/* Temas de Cores */
+.data-theme .card-header { background: #e0f2fe; color: #0369a1; }
+.data-theme .skill-tag { background: #f0f9ff; color: #0284c7; border: 1px solid #e0f2fe; }
+
+.dev-theme .card-header { background: #dcfce7; color: #15803d; }
+.dev-theme .skill-tag { background: #f0fdf4; color: #16a34a; border: 1px solid #dcfce7; }
+
+.tools-theme .card-header { background: #f3e8ff; color: #7e22ce; }
+.tools-theme .skill-tag { background: #faf5ff; color: #9333ea; border: 1px solid #f3e8ff; }
+
+
+/* --- 8. Rodapé (Footer) --- */
+.main-footer {
+    margin-top: 60px;
+    background-color: var(--primary-color); 
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.main-footer .section-title {
+    color: white;
+    border-color: white;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255, 0.2); /* Branco transparente */
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.contact-item:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* --- 9. Responsividade (Mobile) --- */
+@media (max-width: 768px) {
+    .main-header h1 { font-size: 2.5rem; }
+    .main-header .subtitle { font-size: 1.2rem; }
+    
+    /* Experiência vira uma coluna só */
+    .job-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .job-meta {
+        flex: auto;
+        border-right: none; /* Remove a linha lateral */
+        border-left: 3px solid var(--primary-color); /* Coloca linha na esquerda */
+        padding-right: 0;
+        padding-left: 15px;
+        text-align: left;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
 }

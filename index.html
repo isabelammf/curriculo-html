@@ -1,142 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="pt-BR"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo</title>
+    <meta name="description" content="Currículo de Desenvolvedora e Cientista de Dados">
+    <title>Currículo | Isabela Firmino</title>
+    
     <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Mooli&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Croissant+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+
     <div class="container">
 
-        <div class="h-name">
+        <header class="main-header">
             <h1>Isabela de Melo Monteiro Firmino</h1>
-            <h2>Desenvolvedora</h2>
-        </div>
+            <p class="subtitle">Desenvolvedora & Cientista de Dados</p>
+        </header>
 
-        <div class="h-sobre">
-            <div class="h-title-sobre">
-                <h2>Sobre mim</h2>
-            </div>
-            <div class="w-100">
-                <p class="paragraf">
-                    Busco oportunidades desafiadoras, onde posserei aplicar e expandir meus conhecimentos. Tenho interesse
-                    em participar de projetos inovadores, colaborar em equipes multidisciplinares e contribuir para o
-                    crescimento e sucesso da organização. Além do conhecimento técnico, sou uma comunicadora eficaz e
-                    colaboradora em equipe, capaz de me adaptar rapidamente a novos ambientes e desafios.
-                </p>
-            </div>
-        </div>
+        <main>
+            <section class="section-about">
+                <h2 class="section-title">Sobre mim</h2>
+                <div class="content">
+                    <p>
+                        Olá! Sou uma desenvolvedora apaixonada pela lógica por trás dos dados.
+                        Minha base técnica vem do desenvolvimento de software (onde atuei como estagiária Full Stack/Back-end), 
+                        mas foi durante a graduação que descobri minha verdadeira vocação: Modelagem de Dados e SQL.
+                        Nos últimos dois anos, dediquei-me exclusivamente a um ciclo intensivo de estudos avançados, 
+                        aprofundando meus conhecimentos em Banco de Dados, Python e algoritmos. Esse período foi essencial para 
+                        consolidar uma base teórica forte que agora quero aplicar em problemas reais de negócio.
+                        No pessoal: Sou movida a estratégia (viciada em jogos de tabuleiro!), extremamente eclética na música e, 
+                        recentemente, me aventurando nas quadras de Beach Tennis. Acredito que a tecnologia deve servir às pessoas — 
+                        um dos meus maiores orgulhos foi desenvolver e implantar o sistema de tesouraria que hoje gerencia as finanças 
+                        da minha comunidade local.
+                    </p>
+                </div>
+            </section>
 
-        <div class="h-experiencia">
-            <div class="h-title-experiencia">
-                <h2>Experiências</h2>
-            </div>
-            <div class="h-itens">
-                <div class="item">
-                    <div class="work">
-                        <h2>Experiência 1</h2>
-                        <p>BLUETAPE SOLUCOES DIGITAIS LTDA</p>
-                        <p>Abr. 2022 - Out. 2022</p>
+            <section class="section-experience">
+                <h2 class="section-title">Experiências</h2>
+                
+                <div class="timeline">
+                    <article class="job-item">
+                        <div class="job-meta">
+                            <h3>BLUETAPE SOLUÇÕES DIGITAIS LTDA</h3>
+                            <span class="date">Abr. 2022 - Out. 2022</span>
+                        </div>
+                        <div class="job-details">
+                            <h4>Estagiária em Desenvolvimento de Software</h4>
+                            <ul>
+                                <li>Desenvolvimento e manutenção de sistemas de software utilizando Python.</li>
+                                <li>Criação de soluções de automação de processos (RPA) para eficiência.</li>
+                                <li>Integração de sistemas e APIs REST.</li>
+                                <li>Testes unitários e depuração de software.</li>
+                            </ul>
+                        </div>
+                    </article>
                     </div>
-                    <div class="descricao">
-                        <h2>Desenvolvedor de Software e Automação de Processos</h2>
-                        <ul>
-                            <li>Desenvolvimento e manutenção de sistemas de software, utilizando Python.</li>
-                            <li>Criação de soluções de automação de processos para aumentar a eficiência e reduzir erros.</li>
-                            <li>Integração de sistemas e APIs para facilitar a troca de dados entre diferentes plataformas.</li>
-                            <li>Teste e depuração de software para garantir a qualidade e a funcionalidade adequada.</li>
-                        </ul>
+            </section>
+
+            <section class="section-education">
+                <h2 class="section-title">Educação</h2>
+                
+                <div class="education-grid">
+                    <div class="edu-card">
+                        <h3>Pós-graduação em Desenvolvimento e Testes</h3>
+                        <p class="institution">Gran Faculdade Online</p>
+                        <span class="status">Cursando (Prev. Set/2026)</span>
+                    </div>
+
+                    <div class="edu-card">
+                        <h3>Pós-graduação em Ciência de Dados</h3>
+                        <p class="institution">Gran Faculdade Online</p>
+                        <span class="status">Cursando (Prev. Set/2026)</span>
+                    </div>
+
+                    <div class="edu-card">
+                        <h3>Bacharelado em Ciência da Computação</h3>
+                        <p class="institution">Centro Universitário de Brasília - CEUB</p>
+                        <span class="status">Concluído em Jan/2023</span>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
 
-        <div class="h-educacao">
+            <section class="section-skills">
+                <h2 class="section-title">Habilidades Técnicas</h2>
+                
+                <div class="skills-container">
+                    
+                    <div class="skill-card data-theme">
+                        <div class="card-header">
+                            <i class="fas fa-chart-bar header-icon"></i>
+                            <h3>Data Science & Analytics</h3>
+                        </div>
+                        <div class="card-body">
+                            <span class="skill-tag"><i class="fab fa-python"></i> Python (Pandas/Scikit)</span>
+                            <span class="skill-tag"><i class="fas fa-database"></i> SQL Avançado</span>
+                            <span class="skill-tag"><i class="fas fa-project-diagram"></i> ETL & Pipelines</span>
+                            <span class="skill-tag"><i class="fas fa-spider"></i> Web Scraping</span>
+                            <span class="skill-tag"><i class="fas fa-chart-line"></i> Power BI (DAX)</span>
+                        </div>
+                    </div>
 
-            <div class="h-title-educacao">
-                <h2>Educação</h2>
-            </div>
+                    <div class="skill-card dev-theme">
+                        <div class="card-header">
+                            <i class="fas fa-laptop-code header-icon"></i>
+                            <h3>Dev & Automação</h3>
+                        </div>
+                        <div class="card-body">
+                            <span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
+                            <span class="skill-tag"><i class="fab fa-html5"></i> HTML5 & CSS3</span>
+                            <span class="skill-tag"><i class="fas fa-robot"></i> Python (Automação)</span>
+                            <span class="skill-tag"><i class="fas fa-exchange-alt"></i> APIs REST</span>
+                            <span class="skill-tag"><i class="fas fa-vial"></i> Pytest & Selenium</span>
+                        </div>
+                    </div>
 
-            <div class="item">
-                <h2>Ciência da Computação</h2>
-                <p>Centro Universitário de Brasília - CEUB</p>
-                <p>2019 - 2022</p>
-            </div>
-        </div>
+                    <div class="skill-card tools-theme">
+                        <div class="card-header">
+                            <i class="fas fa-tools header-icon"></i>
+                            <h3>Ferramentas</h3>
+                        </div>
+                        <div class="card-body">
+                            <span class="skill-tag"><i class="fab fa-git-alt"></i> Git & GitHub</span>
+                            <span class="skill-tag"><i class="fas fa-tasks"></i> Scrum & Kanban</span>
+                            <span class="skill-tag"><i class="fas fa-brain"></i> IA Generativa (Gemini/GPT)</span>
+                        </div>
+                    </div>
 
-        <div class="h-habilidades">
-            <div class="h-title-habilidades">
-                <h2>Habilidades</h2>
-            </div>
-
-            <div class="item">
-                <div class="title">
-                    <h2>Wordpress</h2>
                 </div>
-                <div class="icon">
-                    <div class="percentual-10"></div>
-                </div>
-            </div>
+            </section>
+        </main>
 
-            <div class="item">
-                <div class="title">
-                    <h2>PHP</h2>
-                </div>
-                <div class="icon">
-                    <div class="percentual-80"></div>
-                </div>
+        <footer class="main-footer">
+            <h2 class="section-title">Contato</h2>
+            <div class="contact-links">
+                <a href="mailto:isabelammf@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>isabelammf@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/isabelafirmino/" target="_blank" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/isabelammf" target="_blank" class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
             </div>
+            <p class="copyright">&copy; 2025 - Desenvolvido por mim.</p>
+        </footer>
 
-            <div class="item">
-                <div class="title">
-                    <h2>JavaScript</h2>
-                </div>
-                <div class="icon">
-                    <div class="percentual-90"></div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="title">
-                    <h2>Python</h2>
-                </div>
-                <div class="icon">
-                    <div class="percentual-100"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="h-contato">
-            <div class="h-title-contato">
-                <h2>Contato</h2>
-            </div>
-            <div class="w-100-item">
-                <h2>Celular:</h2>
-                <p>(61) 98604-0802</p>
-            </div>
-            <div class="w-100-item">
-                <h2>Email:</h2>
-                <p>isabelammf@gmail.com</p>
-            </div>
-            <div class="w-100-item">
-                <h2>Linkedin:</h2>
-                <a href="https://www.linkedin.com/in/isabela-de-melo-monteiro-firmino/" target="_blank">https://www.linkedin.com/in/isabela-de-melo-monteiro-firmino/</a>
-            </div>
-            <div class="w-100-item">
-                <h2>GitHub:</h2>
-                <a href="https://github.com/isabelammf" target="_blank">https://github.com/isabelammf</a>
-            </div>
-        </div>
-    </div> <!-- fim da div do conatainer  -->
-
-    <footer></footer>
+    </div>
 </body>
-
 </html>
